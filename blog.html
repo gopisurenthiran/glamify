@@ -1,0 +1,797 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- <link rel="icon" href="assets/img/favicon.png" alt="MP"> -->
+	<title> Refresha | Salon Details  </title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	
+	<!-- Custom styles for this template -->
+	<link rel="stylesheet" href="assets/css/style.css" rel="stylesheet" >
+	  <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+	
+	<!-- Font Icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+	<link rel="stylesheet" href="assets/iconfonts/mdi/css/materialdesignicons.min.css">
+	<style type="text/css">
+		.owl-nav button {
+  position: absolute;
+  top: 50%;
+  background-color: #000;
+  color: #fff;
+  margin: 0;
+  transition: all 0.3s ease-in-out;
+}
+.owl-nav button.owl-prev {
+  left: 0;
+}
+.owl-nav button.owl-next {
+  right: 0;
+}
+
+.owl-dots {
+  text-align: center;
+  padding-top: 15px;
+  display: none;
+}
+.owl-dots button.owl-dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  display: inline-block;
+  background: #ccc;
+  margin: 0 3px;
+}
+.owl-dots button.owl-dot.active {
+  background-color: #000;
+}
+.owl-dots button.owl-dot:focus {
+  outline: none;
+}
+.owl-nav button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.38) !important;
+}
+.owl-nav  span {
+    font-size: 70px;    
+    position: relative;
+    top: -5px;
+}
+.owl-nav button:focus {
+    outline: none;
+}
+
+.global-container{
+	height:100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #fff;
+}
+
+form{
+	padding-top: 10px;
+	font-size: 14px;
+	margin-top: 30px;
+}
+
+.card-title{ font-weight:300; }
+
+.btn{
+	font-size: 14px;
+	margin-top:20px;
+}
+
+
+.login-form{ 
+	width:60%;
+	margin:20px;
+	border: none;
+}
+
+.sign-up{
+	text-align:center;
+	padding:20px 0 0;
+}
+
+.alert{
+	margin-bottom:-30px;
+	font-size: 13px;
+	margin-top:20px;
+}
+	</style>
+  </head>
+  
+  <body>
+	<header>		
+
+		<nav class="nav navbar-expand-lg sticky-top sticky-offset  fixed-top navbar-dark secondary-navbar">
+		 <div class="nav-wrapper container">
+		  <div class="row m-b-0">
+			<div class="col-2">
+			  <img class="responsive-img"  alt="Refresha LOGO" src="assets/img/login-logo.png" style="width: 150px;">
+			</div>
+			  <div class="col-7 autocomplete">
+				<div class="row " id="globalSearch_new">
+				  <div class="col-3 m2 x2 s3" >
+					<div class="select-wrapper city-switch material ">
+					  
+			<select class="selectpicker_det des" data-show-subtext="false" data-live-search="true" >
+				<option value="ALVA">Chennai</option>
+				<option value="PNCU">Cochin</option>
+				<option value="CPPY">Bangalore</option>
+				
+
+			  </select>
+					</div>
+				  </div>
+				  <div class="col-4 m4 l4 s9">
+					<input class="ui-autocompletez-input" name="locationInput" id="myInput" autocomplete="off" placeholder="Your Location..." type="text" value="" autocompletez="off">
+				  </div>
+				  <div class="col-4 m4 l4 s12">
+				  
+					<select name="serviceInput" class="selectpicker_det des" data-show-subtext="false" data-live-search="true" style="-webkit-appearance: none;">
+						<option value="">Search for a Salon or Service...</option>
+						<option value="HairCut">Hair Cut</option>
+						<option value="Facial">Facial</option>
+						<option value="HairColouring">Hair Colouring</option>
+						<option value="WaxingHair Removal">Waxing &amp; Hair Removal</option>
+						<option value="Pedicure">Pedicure</option>
+						<option value="Manicures">Manicures</option>
+						<option value="Pedicure">Pedicure</option>
+						<option value="Hair Treatment">Hair Treatment</option>
+						<option value="Hair Spa">Hair Spa</option>
+						<option value="Hair Straightening">Hair Straightening</option>
+						
+				
+				
+					  </select>
+				</div>
+				  <div class="col-1 m2 l2 s12 main-search-btn text-right">
+					<!-- <button class="btn btn-primary white-text waves-light waves-effect w-100 wavesInit" id="search-btn" type="submit" name="action" click-and-wait="searchClick()"> -->
+					  <i class="fa fa-search"></i>  </button>
+				  </div>
+				</div>
+			  </div>
+			  <div class="col-3">
+				<div class="collapse navbar-collapse w-100 order-1 order-lg-0" id="navbarNav">
+				  <ul class="navbar-nav ml-0 mt-3">
+					<li class="nav-item"><a class="nav-link nav-loginBtn" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Business </a></li>
+					<li class="nav-item dropdown">
+					  <a class="nav-link nav-loginBtn" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">  More </a>
+					  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<li> <a class="dropdown-item" href="myprofile.html"> Blog</a></li>
+						<li> <a class="dropdown-item" href="login.html"> Contact us </a></li>
+					  </ul>
+					</li>
+					<li class="nav-item"><a class="nav-link nav-loginBtn" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Login </a></li>
+				  </ul>
+				</div>
+			  </div>
+		  </div>
+		 </div>	
+		</nav>
+		
+	  </header>
+	  <section id="breadcrumbSec">
+		<div class="container">
+		  <div class="row">
+			<div class="col-lg-12">
+				<nav aria-label="breadcrumb">
+					<ol class="breadcrumb px-0">
+					  
+					  <li class="breadcrumb-item">
+						<a href="vendors.html">Home</a>
+					  </li>
+					  <li class="breadcrumb-item" aria-current="page"> Salons-spas-in-mumbai </li>
+					  <li class="breadcrumb-item" aria-current="page"> hair-colouring </li>
+					  <li class="breadcrumb-item" aria-current="page"> lokhandwala </li>
+					</ol>
+				  </nav>
+			</div>
+			
+		  </div>
+		</div>
+	  </section>
+	
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+      <section class="blog-listing gray-bg">
+              <div class="container">
+                  <div class="row align-items-start">
+                      <div class="col-lg-8 m-15px-tb">
+                          <div class="row">
+                              <div class="col-sm-6">
+                                  <div class="blog-grid">
+                                      <div class="blog-img">
+                                          <div class="date">
+                                              <span>04</span>
+                                              <label>FEB</label>
+                                          </div>
+                                          <a href="#">
+                                              <img src="https://www.bootdey.com/image/400x200/FFB6C1/000000" title="" alt="">
+                                          </a>
+                                      </div>
+                                      <div class="blog-info">
+                                          <h5><a href="#">Prevent 75% of visitors from google analytics</a></h5>
+                                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                          <div class="btn-bar">
+                                              <a href="#" class="px-btn-arrow">
+                                                  <span>Read More</span>
+                                                  <i class="arrow"></i>
+                                              </a>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col-sm-6">
+                                  <div class="blog-grid">
+                                      <div class="blog-img">
+                                          <div class="date">
+                                              <span>04</span>
+                                              <label>FEB</label>
+                                          </div>
+                                          <a href="#">
+                                              <img src="https://www.bootdey.com/image/400x200/D3D3D3/000000" title="" alt="">
+                                          </a>
+                                      </div>
+                                      <div class="blog-info">
+                                          <h5><a href="#">Prevent 75% of visitors from google analytics</a></h5>
+                                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                          <div class="btn-bar">
+                                              <a href="#" class="px-btn-arrow">
+                                                  <span>Read More</span>
+                                                  <i class="arrow"></i>
+                                              </a>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col-sm-6">
+                                  <div class="blog-grid">
+                                      <div class="blog-img">
+                                          <div class="date">
+                                              <span>04</span>
+                                              <label>FEB</label>
+                                          </div>
+                                          <a href="#">
+                                              <img src="https://www.bootdey.com/image/400x200/87CEFA/000000" title="" alt="">
+                                          </a>
+                                      </div>
+                                      <div class="blog-info">
+                                          <h5><a href="#">Prevent 75% of visitors from google analytics</a></h5>
+                                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                          <div class="btn-bar">
+                                              <a href="#" class="px-btn-arrow">
+                                                  <span>Read More</span>
+                                                  <i class="arrow"></i>
+                                              </a>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col-sm-6">
+                                  <div class="blog-grid">
+                                      <div class="blog-img">
+                                          <div class="date">
+                                              <span>04</span>
+                                              <label>FEB</label>
+                                          </div>
+                                          <a href="#">
+                                              <img src="https://www.bootdey.com/image/400x200/D3D3D3/000000" title="" alt="">
+                                          </a>
+                                      </div>
+                                      <div class="blog-info">
+                                          <h5><a href="#">Prevent 75% of visitors from google analytics</a></h5>
+                                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                          <div class="btn-bar">
+                                              <a href="#" class="px-btn-arrow">
+                                                  <span>Read More</span>
+                                                  <i class="arrow"></i>
+                                              </a>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col-sm-6">
+                                  <div class="blog-grid">
+                                      <div class="blog-img">
+                                          <div class="date">
+                                              <span>04</span>
+                                              <label>FEB</label>
+                                          </div>
+                                          <a href="#">
+                                              <img src="https://www.bootdey.com/image/400x200/E0FFFF/000000" title="" alt="">
+                                          </a>
+                                      </div>
+                                      <div class="blog-info">
+                                          <h5><a href="#">Prevent 75% of visitors from google analytics</a></h5>
+                                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                          <div class="btn-bar">
+                                              <a href="#" class="px-btn-arrow">
+                                                  <span>Read More</span>
+                                                  <i class="arrow"></i>
+                                              </a>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col-sm-6">
+                                  <div class="blog-grid">
+                                      <div class="blog-img">
+                                          <div class="date">
+                                              <span>04</span>
+                                              <label>FEB</label>
+                                          </div>
+                                          <a href="#">
+                                              <img src="https://www.bootdey.com/image/400x200/FFF0F5/000000" title="" alt="">
+                                          </a>
+                                      </div>
+                                      <div class="blog-info">
+                                          <h5><a href="#">Prevent 75% of visitors from google analytics</a></h5>
+                                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                          <div class="btn-bar">
+                                              <a href="#" class="px-btn-arrow">
+                                                  <span>Read More</span>
+                                                  <i class="arrow"></i>
+                                              </a>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col-12">
+                                  <ul class="pagination justify-content-center">
+                                      <li class="page-item disabled">
+                                          <a class="page-link" href="#" tabindex="-1"><i class="fas fa-chevron-left"></i></a>
+                                      </li>
+                                      <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                      <li class="page-item active">
+                                          <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+                                      </li>
+                                      <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                      <li class="page-item">
+                                          <a class="page-link" href="#"><i class="fas fa-chevron-right"></i></a>
+                                      </li>
+                                  </ul>
+                              </div>
+                          </div>
+                      </div>
+      
+                      <div class="col-lg-4 m-15px-tb blog-aside">
+                          <!-- Author -->
+                          <div class="widget widget-author">
+                              <div class="widget-title">
+                                  <h3>Author</h3>
+                              </div>
+                              <div class="widget-body">
+                                  <div class="media align-items-center">
+                                      <div class="avatar">
+                                          <img src="https://bootdey.com/img/Content/avatar/avatar6.png" title="" alt="">
+                                      </div>
+                                      <div class="media-body">
+                                          <h6>Hello, I'm<br> Rachel Roth</h6>
+                                      </div>
+                                  </div>
+                                  <p>I design and develop services for customers of all sizes, specializing in creating stylish, modern websites, web services and online stores</p>
+                              </div>
+                          </div>
+                          <!-- End Author -->
+      
+                          <!-- Trending Post -->
+                          <div class="widget widget-post">
+                              <div class="widget-title">
+                                  <h3>Trending Now</h3>
+                              </div>
+                              <div class="widget-body">
+      
+                              </div>
+                          </div>
+                          <!-- End Trending Post -->
+      
+                          <!-- Latest Post -->
+                          <div class="widget widget-latest-post">
+                              <div class="widget-title">
+                                  <h3>Latest Post</h3>
+                              </div>
+                              <div class="widget-body">
+                                  <div class="latest-post-aside media">
+                                      <div class="lpa-left media-body">
+                                          <div class="lpa-title">
+                                              <h5><a href="#">Prevent 75% of visitors from google analytics</a></h5>
+                                          </div>
+                                          <div class="lpa-meta">
+                                              <a class="name" href="#">
+                                                  Rachel Roth
+                                              </a>
+                                              <a class="date" href="#">
+                                                  26 FEB 2020
+                                              </a>
+                                          </div>
+                                      </div>
+                                      <div class="lpa-right">
+                                          <a href="#">
+                                              <img src="https://www.bootdey.com/image/400x200/E6E6FA/000000" title="" alt="">
+                                          </a>
+                                      </div>
+                                  </div>
+      
+                                  <div class="latest-post-aside media">
+                                      <div class="lpa-left media-body">
+                                          <div class="lpa-title">
+                                              <h5><a href="#">Prevent 75% of visitors from google analytics</a></h5>
+                                          </div>
+                                          <div class="lpa-meta">
+                                              <a class="name" href="#">
+                                                  Rachel Roth
+                                              </a>
+                                              <a class="date" href="#">
+                                                  26 FEB 2020
+                                              </a>
+                                          </div>
+                                      </div>
+                                      <div class="lpa-right">
+                                          <a href="#">
+                                              <img src="https://www.bootdey.com/image/400x200/FFA07A/000000" title="" alt="">
+                                          </a>
+                                      </div>
+                                  </div>
+      
+                                  <div class="latest-post-aside media">
+                                      <div class="lpa-left media-body">
+                                          <div class="lpa-title">
+                                              <h5><a href="#">Prevent 75% of visitors from google analytics</a></h5>
+                                          </div>
+                                          <div class="lpa-meta">
+                                              <a class="name" href="#">
+                                                  Rachel Roth
+                                              </a>
+                                              <a class="date" href="#">
+                                                  26 FEB 2020
+                                              </a>
+                                          </div>
+                                      </div>
+                                      <div class="lpa-right">
+                                          <a href="#">
+                                              <img src="https://www.bootdey.com/image/400x200/FFF0F5/000000" title="" alt="">
+                                          </a>
+                                      </div>
+                                  </div>
+      
+                              </div>
+                          </div>
+                          <!-- End Latest Post -->
+      
+                          <!-- widget Tags -->
+                          <div class="widget widget-tags">
+                              <div class="widget-title">
+                                  <h3>Latest Tags</h3>
+                              </div>
+                              <div class="widget-body">
+                                  <div class="nav tag-cloud">
+                                      <a href="#">Design</a>
+                                      <a href="#">Development</a>
+                                      <a href="#">Travel</a>
+                                      <a href="#">Web Design</a>
+                                      <a href="#">Marketing</a>
+                                      <a href="#">Research</a>
+                                      <a href="#">Managment</a>
+                                  </div>
+                              </div>
+                          </div>
+                          <!-- End widget Tags -->
+                      </div>
+                  </div>
+              </div>
+          </section>
+	  
+	
+          <footer class="mainfooter" role="contentinfo">  
+            <div class="footer-middle">  
+            <div class="container">  
+              <div class="row">  
+                <div class="col-md-3 col-sm-6">  
+                  <div class="footer-pad">  
+                    <h4> Footer Heading 1</h4>  
+                    <ul class="list-unstyled">  
+                      <li> <a href="#"> </a> </li>  
+                      <li> <a href="#">Payment Center</a></li>  
+                      <li> <a href="#"> Contact Directory </a></li>  
+                      <li> <a href="#">Forms</a></li>  
+                      <li> <a href="#">News and Updates</a></li>  
+                      <li> <a href="#">FAQs</a></li>  
+                    </ul>  
+                  </div>  
+                </div>  
+                <div class="col-md-3 col-sm-6">  
+                  <div class="footer-pad">  
+                    <h4> Footer Heading 2</h4>  
+                    <ul class="list-unstyled">  
+                      <li><a href="#"> Blog </a> </li>  
+                      <li><a href="#">Accessibility</a> </li>  
+                      <li><a href="#">Disclaimer</a></li>  
+                      <li><a href="#">Privacy Policy</a></li>  
+                      <li><a href="#">FAQs</a></li>  
+                      <li><a href="#">Webmaster</a></li>  
+                    </ul>  
+                  </div>  
+                </div>  
+                <div class="col-md-3 col-sm-6">  
+                  <div class="footer-pad">  
+                    <h4> Footer Heading 3 </h4>  
+                    <ul class="list-unstyled">  
+                      <li> <a href="#"> Parks and Recreation </a> </li>  
+                      <li> <a href="#"> Public Works </a> </li>  
+                      <li> <a href="#">Police Department</a> </li>  
+                      <li> <a href="#"> Fire </a> </li>  
+                      <li> <a href="#"> Mayor and City Council </a> </li>  
+                    </ul>  
+                  </div>  
+                </div>  
+                  <div class="col-md-3">  
+                      <h4> Follow Us </h4>  
+                      <ul class="social-network social-circle">  
+                       <li> <a href="#" class="icoFacebook" title="Facebook"> <i class="fab fa-facebook-f"></i> </a> </li>  
+                       <li> <a href="#" class="icoLinkedin" title="Linkedin"> <i class="fab fa-linkedin"> </i> </a> </li>  
+              <li> <a href="#"> <i class="fab fa-youtube" aria-hidden="true"> </i> </a> </li>  
+                      </ul>               
+              </div>  
+              </div>  
+              <div class="row">  
+              <div class="col-md-12 copy">  
+              <p class="text-center"> © Copyright 2021 - Company Name.  All rights reserved. </p>  
+              </div>  
+              </div>  
+            </div>  
+            </div>  
+          </footer>  
+	
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->	
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://jaysalvat.github.io/vegas/releases/latest/vegas.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>	
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+	<script type="text/javascript">	
+		$(document).ready(function() {
+			$(".info-link").click(function() {
+				var t = $(this).attr("href");
+				$('.active').removeClass('active');
+				$("html, body").animate({
+					scrollTop: $(t).offset().top - 50
+				}, {
+					duration: 1e3,
+				});
+
+				$('body').scrollspy({ target: '#vendor-info',offset: $(t).offset().top });
+				$(this).parent().addClass('active');
+				return false;
+			});
+
+		});
+	</script>
+	<script type="text/javascript">	
+		jQuery(document).ready(function($){
+	
+			$(".rating").on('click',(function(e) {
+			
+			var previous_value = $("#selected_rating").val();
+			
+			var selected_value = $(this).attr("data-attr");
+			$("#selected_rating").val(selected_value);
+			
+			$(".selected-rating").empty();
+			$(".selected-rating").html(selected_value);
+			
+			for (i = 1; i <= selected_value; ++i) {
+			$("#rating-star-"+i).toggleClass('text-warning');
+			$("#rating-star-"+i).toggleClass('text-secondary');
+			}
+			
+			for (ix = 1; ix <= previous_value; ++ix) {
+			$("#rating-star-"+ix).toggleClass('text-warning');
+			$("#rating-star-"+ix).toggleClass('text-secondary');
+			}
+			
+			}));				
+				
+		});
+
+	</script>
+	
+	
+	 <script src="assets/js/owl.carousel.js"></script>
+	 <script>
+            $(document).ready(function() {
+              $('.similar-vendors-carousel').owlCarousel({
+                loop: true,
+                margin: 10,
+                responsiveClass: true,
+                responsive: {
+                  0: {
+                    items: 1,
+                    nav: false,
+					autoplay:true,
+					autoplayTimeout:4000,
+					autoplayHoverPause:true
+                  },
+                  600: {
+                    items: 1,
+                    nav: false,
+					autoplay:true,
+					autoplayTimeout:4000,
+					autoplayHoverPause:true
+                  },
+                  1000: {
+                    items: 1,
+                    nav: false,
+                    loop: false,
+                    margin: 20,
+					autoplay:true,
+					autoplayTimeout:4000,
+					autoplayHoverPause:true
+                  }
+                }
+              })
+            })
+          </script>
+
+<script>
+	$(document).ready(function(){
+	  $("#search").on("keyup", function() {
+		var value = $(this).val().toLowerCase();
+		$("#myTable tr").filter(function() {
+		  $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+		});
+	  });
+	});
+	</script>
+
+	<script>
+		jQuery("#carousel").owlCarousel({
+  autoplay: false,
+  rewind: true, /* use rewind if you don't want loop */
+  margin: 20,
+   /*
+  animateOut: 'fadeOut',
+  animateIn: 'fadeIn',
+  */
+  responsiveClass: true,
+  autoHeight: true,
+  autoplayTimeout: 7000,
+  smartSpeed: 800,
+  nav: true,
+  responsive: {
+    0: {
+      items: 1
+    },
+
+    600: {
+      items: 3
+    },
+
+    1024: {
+      items: 4
+    },
+
+    1366: {
+      items: 4
+    }
+  }
+});
+	</script>
+
+<script>
+function autocomplete(inp, arr) {
+	/*the autocomplete function takes two arguments,
+	the text field element and an array of possible autocompleted values:*/
+	var currentFocus;
+	/*execute a function when someone writes in the text field:*/
+	inp.addEventListener("input", function(e) {
+		var a, b, i, val = this.value;
+		/*close any already open lists of autocompleted values*/
+		closeAllLists();
+		if (!val) { return false;}
+		currentFocus = -1;
+		/*create a DIV element that will contain the items (values):*/
+		a = document.createElement("DIV");
+		a.setAttribute("id", this.id + "autocomplete-list");
+		a.setAttribute("class", "autocomplete-items");
+		/*append the DIV element as a child of the autocomplete container:*/
+		this.parentNode.appendChild(a);
+		/*for each item in the array...*/
+		for (i = 0; i < arr.length; i++) {
+		  /*check if the item starts with the same letters as the text field value:*/
+		  if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+			/*create a DIV element for each matching element:*/
+			b = document.createElement("DIV");
+			/*make the matching letters bold:*/
+			b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+			b.innerHTML += arr[i].substr(val.length);
+			/*insert a input field that will hold the current array item's value:*/
+			b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+			/*execute a function when someone clicks on the item value (DIV element):*/
+			b.addEventListener("click", function(e) {
+				/*insert the value for the autocomplete text field:*/
+				inp.value = this.getElementsByTagName("input")[0].value;
+				/*close the list of autocompleted values,
+				(or any other open lists of autocompleted values:*/
+				closeAllLists();
+			});
+			a.appendChild(b);
+		  }
+		}
+	});
+	/*execute a function presses a key on the keyboard:*/
+	inp.addEventListener("keydown", function(e) {
+		var x = document.getElementById(this.id + "autocomplete-list");
+		if (x) x = x.getElementsByTagName("div");
+		if (e.keyCode == 40) {
+		  /*If the arrow DOWN key is pressed,
+		  increase the currentFocus variable:*/
+		  currentFocus++;
+		  /*and and make the current item more visible:*/
+		  addActive(x);
+		} else if (e.keyCode == 38) { //up
+		  /*If the arrow UP key is pressed,
+		  decrease the currentFocus variable:*/
+		  currentFocus--;
+		  /*and and make the current item more visible:*/
+		  addActive(x);
+		} else if (e.keyCode == 13) {
+		  /*If the ENTER key is pressed, prevent the form from being submitted,*/
+		  e.preventDefault();
+		  if (currentFocus > -1) {
+			/*and simulate a click on the "active" item:*/
+			if (x) x[currentFocus].click();
+		  }
+		}
+	});
+	function addActive(x) {
+	  /*a function to classify an item as "active":*/
+	  if (!x) return false;
+	  /*start by removing the "active" class on all items:*/
+	  removeActive(x);
+	  if (currentFocus >= x.length) currentFocus = 0;
+	  if (currentFocus < 0) currentFocus = (x.length - 1);
+	  /*add class "autocomplete-active":*/
+	  x[currentFocus].classList.add("autocomplete-active");
+	}
+	function removeActive(x) {
+	  /*a function to remove the "active" class from all autocomplete items:*/
+	  for (var i = 0; i < x.length; i++) {
+		x[i].classList.remove("autocomplete-active");
+	  }
+	}
+	function closeAllLists(elmnt) {
+	  /*close all autocomplete lists in the document,
+	  except the one passed as an argument:*/
+	  var x = document.getElementsByClassName("autocomplete-items");
+	  for (var i = 0; i < x.length; i++) {
+		if (elmnt != x[i] && elmnt != inp) {
+		  x[i].parentNode.removeChild(x[i]);
+		}
+	  }
+	}
+	/*execute a function when someone clicks in the document:*/
+	document.addEventListener("click", function (e) {
+		closeAllLists(e.target);
+	});
+  }
+  
+  /*An array containing all the country names in the world:*/
+  var countries = ["Kammana Halli","8th Cross Bommana Halli","Samaj Mandir Halli Marg, Government Colony, Bandra East, Mumbai, Maharashtra 400051, India","8th Cross Road, Chikka Madivala, Stage 1, BTM Layout 1, Bengaluru, Karnataka 560068, India"];
+  
+  /*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
+  autocomplete(document.getElementById("myInput"), countries);
+  </script>
+	
+  </body>
+</html>
