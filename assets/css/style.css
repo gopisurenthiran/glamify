@@ -50,8 +50,8 @@ p {
 }
 .theme-btn-pink {
   color: #fff;
-  background-color: #b05f59;
-  border-color: #b05f59;
+  background-color: #000;
+  border-color: #000;
   border-radius:.25rem;
   font-size:16px;
   
@@ -167,9 +167,7 @@ p {
   min-height:100%!important;
 }
 #loginSec h1{
-  font-family: 'Great Vibes', cursive;
-  font-size: 4.8rem;
-  color: #923e6c;
+  color: #fff;
 }
 :root {
 --input-padding-x: 1.35rem;
@@ -375,7 +373,7 @@ display: block;
 .secondary-navbar .dropdown-menu li a:hover{
   color:#fff;
   padding: .25rem .75rem;
-  background: #bb6f69;
+  background: #ff9912;
   font-weight: 700;
 }
 .navbar-toggler-icon{
@@ -674,8 +672,8 @@ box-shadow: transparent;
   text-align:center;
 }
 #breadcrumbSec {
-  background: #f9e1df;
-  margin-top: 20px;
+  background: #ff9912;
+ 
 }
 #breadcrumbSec h6 {
   padding: .7rem 0;
@@ -1852,7 +1850,7 @@ input[type=number] {
   padding: 40px 0 30px 0;
 }
 
-@media (min-width: 575px) {
+@media (min-width: 575px)
 .thumb-about:nth-child(-n+3) {
   padding-top: 0;
 }
@@ -1918,9 +1916,22 @@ input[type=number] {
 
   height: 48px !important;
   color: #fff;
-  background-color: #e15462;
-  border-color: #e15462;
+  background-color: #fc6f09;
+  border-color: #fc6f09;
 
+}
+
+
+.btn-primary:hover {
+  color: #fff;
+  background-color: #000;
+  border-color: #000;
+}
+
+.secondary-navbar img {
+
+    padding-top: 25px !important;
+    height: auto !important;
 }
 
 
@@ -2930,8 +2941,12 @@ label {
      
      .responsive-img {
 
-        max-width: 225px !important;   
+        max-width: 225px !important;  
+        /* padding-top: 25px !important;  */
      }
+
+
+
 
 /*=== Footer Bottom ===*/
 .footer-bottom {
@@ -3061,8 +3076,146 @@ label {
 }
 
 
-     
 
+#loginSec{
+  position: relative;
+  width: 100%;
+  padding-top: 150px;
+  padding-bottom: 100px;
+  color: white;
+  background: url(https://www.zooty.in/suggestadoc/images/bg-pattern.png), #1c92d2;
+  background: url(https://www.zooty.in/suggestadoc/images/bg-pattern.png), linear-gradient(to left, #dc2430, #7b4397);
+}
+
+.bg-class-salon {
+
+   background-color: #f5f5f5;
+}
+
+.review-text {
+
+   font-size: 14px;
+}
+
+.card {
+
+  border: none !important;
+}
+
+
+.nav-link {
+
+  display: block;
+  padding: 0.3rem 1rem !important;
+}
+
+
+.breadcrumb-item+.breadcrumb-item {
+
+     color: #fff !important;
+}  
+
+
+.mp__cat-blk p {
+  color: #333;
+  font-size: 17px;
+  margin: 12px 0 0 0;
+}
+.mp__cat-card {
+  box-shadow: 0px 1px 6px rgb(0 0 0 / 20%);
+  border-radius: 12px;
+  background-color: #fff;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  color: #101928;
+  flex-direction: column;
+}
+#top-cat .owl-stage-outer {
+  padding: 15px 0; 
+}
+
+
+
+
+button:focus,
+button:active {
+    outline: none;
+}
+/* End Banner Section */
+/* owl nav */
+
+.owl-theme .owl-nav [class*='owl-'] {
+
+  color: #FFF;
+  font-size: 14px !important;
+  /* margin: 5px; */
+  /* padding: 4px 7px; */
+  background: #D6D6D6;
+  background: rgb(35 178 175 / 35%)!important;
+  position: absolute !important;
+  top: 45%;
+  /* display: inline-block; */
+  cursor: pointer!important;
+  height: 44px!important;
+  width: 44px!important;
+  border-radius: 3px!important;
+  line-height: 44px!important;
+  text-align: center!important;
+  border-radius: 100px!important;
+  margin: 0 !important;
+  padding: 2px 3px !important;
+      
+}
+
+.section__wrap {
+  float: left;
+  width: 100%;
+  position: relative;
+  padding: 60px 0;
+}
+
+.mp__categories {
+  background: #F8FFF9;
+}
+
+.owl-prev span, .owl-next span {
+	color: #171a29;
+	background: #fff;
+	border-radius: 100px;
+	height: 44px;
+	width: 44px;
+	line-height: 44px;
+	text-align: center;
+	font-size: 18px;
+}
+.owl-prev span:hover .fa-chevron-left:before {
+    -ms-transform: translateX(-4px);
+    transform: translateX(-4px);
+}
+.owl-next span:hover .fa-chevron-right:before{
+    -ms-transform: translateX(-4px);
+    transform: translateX(-4px);
+}
+.owl-prev span:hover, 
+.owl-next span:hover {
+	color: #8199A3;
+}
+
+.owl-prev, .owl-next {
+	position: absolute;
+	top: 0;
+	height: 100%;
+}
+
+.owl-prev {
+	left: -30px;
+}
+
+.owl-next {
+	right: -30px;
+}
 
     /*************************end *****************/
 
