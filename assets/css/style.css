@@ -1852,7 +1852,7 @@ input[type=number] {
   padding: 40px 0 30px 0;
 }
 
-@media (min-width: 575px)
+@media (min-width: 575px) {
 .thumb-about:nth-child(-n+3) {
   padding-top: 0;
 }
